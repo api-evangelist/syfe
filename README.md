@@ -64,5 +64,30 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Syfe is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Syfe is a Singapore-headquartered digital wealth management platform, licensed by the Monetary
+Authority of Singapore under Capital Markets Services licence CMS100837 and operating in Singapore,
+Hong Kong and Australia (where it trades as Selfwealth by Syfe). Founded in 2019 by Dhruv Arora and
+backed by Valar Ventures and Unbound, Syfe combines robo-advised managed portfolios (Core, REIT+,
+Income+, Select Themes), a self-directed brokerage for US, Singapore, Hong Kong and London listed
+stocks, ETFs and options, and Cash+ cash management, alongside a private wealth offering and a
+business treasury product.
+
+**Syfe publishes no public API.** As of 2026-08-29 there is no developer portal, API reference,
+OpenAPI/AsyncAPI/GraphQL contract, SDK, CLI, webhook catalogue or MCP server on any Syfe surface.
+Contract discovery was run against `www.syfe.com` and `api.syfe.com` covering `/openapi.json`,
+`/openapi.yaml`, `/swagger.json`, `/v1/openapi.json`, `/api-docs`, `/docs`, `/redoc`, `/graphql`,
+`/apis.json`, `/llms.txt` and seven `/.well-known/` paths. `www.syfe.com` is a Webflow site whose
+catch-all answers HTTP 200 with a 131,618-byte "Not Found" page for every unmatched path, and
+`api.syfe.com` — the private application backend — answers HTTP 403 with a Cloudflare interstitial
+on every path including `robots.txt`. `developer.syfe.com` and `docs.syfe.com` do not resolve.
+
+What Syfe does publish, and what this profile captures:
+
+- **Vulnerability disclosure** — a bug bounty programme at <https://www.syfe.com/bug-bounty>, moved
+  to HackerOne (<https://hackerone.com/syfe_bbp/>) in March 2025.
+- **Regulatory posture** — MAS CMS100837, FIDReC membership, SIPC coverage on US-listed securities.
+  No SOC 2, ISO 27001 or PCI DSS is claimed.
+- **Domain security** — TLS 1.3, HSTS (max-age 31536000), DNSSEC enabled, SPF and DMARC present
+  (policy `quarantine`), no CAA records.
+
+- <https://www.syfe.com/>

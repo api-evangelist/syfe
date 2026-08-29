@@ -1,0 +1,18 @@
+generated: '2026-08-29'
+method: searched
+source: https://www.syfe.com/pricing
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  Syfe publishes no API and no rate limits. Searched the pricing page, the security page, the
+  legal index and the full sitemap (0 URLs matching api/developer/docs/integration), and probed
+  api.syfe.com directly — every path answers a Cloudflare 403 interstitial, so no live response
+  headers (X-RateLimit-*, RateLimit-*, Retry-After) could be observed either. An honest zero:
+  there is no limit to record because there is no documented API to limit. No RateLimits pointer
+  is wired into apis.yml.
+evidence:
+- url: https://www.syfe.com/pricing
+  status: 200
+- url: https://api.syfe.com/
+  status: 403

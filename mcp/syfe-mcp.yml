@@ -1,0 +1,21 @@
+generated: '2026-08-29'
+method: searched
+status: none
+source: >-
+  Searched Syfe's own site (www.syfe.com, sitemap_index.xml — 0 URLs matching api/developer/docs/
+  integration), npm (no @syfe/* or syfe-* package), PyPI, RubyGems and crates.io, plus web search
+  for a Syfe MCP server. Probed https://api.syfe.com (Cloudflare 403 on every path) and
+  https://www.syfe.com (Webflow catch-all 200 on every path).
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+tools: []
+note: >-
+  Syfe ships no MCP server, hosted or local-stdio, and there is no OpenAPI in this repo from which
+  a candidate tool list could be derived — Syfe publishes no machine-readable contract at all.
+  No MCPServer pointer is emitted in apis.yml; this file records that the search was run and
+  returned nothing, which is the honest result.

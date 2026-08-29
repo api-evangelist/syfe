@@ -1,0 +1,63 @@
+generated: '2026-08-29'
+method: searched
+source: https://www.syfe.com/security
+scope: >-
+  Syfe publishes no machine-readable API contract, so no standard below could be derived from a
+  specification. Every entry here is a claim Syfe makes on its own public pages, or an honest
+  negative recorded from a probe. Nothing is inferred from a spec that does not exist.
+standards:
+- id: mas-cms
+  name: MAS Capital Markets Services Licence
+  conforms: true
+  identifier: CMS100837
+  regulator: Monetary Authority of Singapore
+  evidence: >-
+    https://www.syfe.com/security states Syfe is licensed by the Monetary Authority of Singapore
+    under Capital Markets Services licence CMS100837.
+- id: fidrec
+  name: Financial Industry Disputes Resolution Centre (FIDReC)
+  conforms: true
+  evidence: >-
+    https://www.syfe.com/security states Syfe is a registered member of FIDReC for dispute
+    resolution.
+- id: sipc
+  name: SIPC coverage (US-listed securities, via executing broker)
+  conforms: true
+  evidence: >-
+    https://www.syfe.com/security states US-listed securities are covered up to US$500,000
+    against brokerage failure under SIPC.
+- id: soc2
+  name: SOC 2
+  conforms: false
+  evidence: Not named on https://www.syfe.com/security or any other public Syfe page probed 2026-08-29.
+- id: iso-27001
+  name: ISO/IEC 27001
+  conforms: false
+  evidence: Not named on https://www.syfe.com/security or any other public Syfe page probed 2026-08-29.
+- id: pci-dss
+  name: PCI DSS
+  conforms: false
+  evidence: Not named on any public Syfe page probed 2026-08-29.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: >-
+    No public API, no published securitySchemes, no /.well-known/oauth-authorization-server
+    (www.syfe.com answers the Webflow catch-all; api.syfe.com answers a Cloudflare challenge).
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: No published contract or error reference to read.
+domain_standards:
+  note: >-
+    Syfe's market — retail wealth management and brokerage in Singapore, Hong Kong and Australia —
+    has candidate domain standards (FIX for order routing, FDX/SGFinDex for account aggregation,
+    ISO 20022 for payment messaging). Syfe declares none of them on any public surface and
+    publishes no contract in which such a declaration could appear, so no domain_standard
+    conformance is asserted. Reward-only check: recorded as not applicable, not as a failure.
+  checked:
+  - fix-protocol
+  - sgfindex
+  - fdx
+  - iso-20022
+  found: []

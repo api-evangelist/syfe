@@ -1,0 +1,25 @@
+generated: '2026-08-29'
+method: searched
+source: https://www.syfe.com/pricing
+plan_count: 0
+plans: []
+note: >-
+  Syfe has no API and therefore no API plans. The pricing page it does publish
+  (https://www.syfe.com/pricing, HTTP 200, verified 2026-08-29) prices the consumer wealth
+  product, not developer access: five client tiers by assets under management — Blue (no
+  minimum, 0.65% p.a.), Black (S$50K+, 0.55%), Gold (S$250K+, 0.45%), Platinum (S$1M+, 0.35%)
+  and Diamond (S$5M+, 0.25%) — plus brokerage commissions by market and zero-commission options.
+  Those are recorded here for provenance only; they are deliberately NOT modelled as plans[] and
+  no Plans pointer is wired into apis.yml, because crediting consumer management-fee tiers as API
+  plans would score Syfe for a developer surface it does not sell. The pricing page states no API
+  access, developer plan or rate limit anywhere.
+consumer_pricing_reference:
+  url: https://www.syfe.com/pricing
+  http_status: 200
+  fetched: '2026-08-29'
+  tiers:
+  - {name: Blue, minimum_aum: null, management_fee_annual: 0.65%}
+  - {name: Black, minimum_aum: SGD 50000, management_fee_annual: 0.55%}
+  - {name: Gold, minimum_aum: SGD 250000, management_fee_annual: 0.45%}
+  - {name: Platinum, minimum_aum: SGD 1000000, management_fee_annual: 0.35%}
+  - {name: Diamond, minimum_aum: SGD 5000000, management_fee_annual: 0.25%}

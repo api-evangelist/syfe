@@ -1,0 +1,75 @@
+generated: '2026-08-29'
+method: probed
+source: live GET of /.well-known/* on every Syfe host reachable from apis.yml
+hit_count: 0
+hosts:
+- host: https://www.syfe.com
+  note: >-
+    Webflow-hosted marketing site with a catch-all that answers HTTP 200 and a 131,618-byte
+    "Not Found" page for EVERY unmatched path. A 200 here is not a document. Control probe
+    below establishes the byte signature.
+  soft_404_control:
+    path: /this-page-definitely-does-not-exist-abc123xyz
+    status: 200
+    bytes: 131618
+    title: Not Found
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: catch-all HTML, 130680 bytes, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: catch-all HTML, 130680 bytes, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: catch-all HTML, 130680 bytes, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: catch-all HTML, 130680 bytes, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: catch-all HTML, 130680 bytes, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: catch-all HTML, 130680 bytes, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: catch-all HTML, 130680 bytes, not a document
+- host: https://api.syfe.com
+  note: >-
+    Syfe's private application backend. Every path answers HTTP 403 with a Cloudflare
+    "Just a moment..." interstitial (~5.7KB). Nothing anonymous is served, including robots.txt.
+    Not a documented developer API host.
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+pointer_note: >-
+  No WellKnown and no SecurityTxt pointer is emitted in apis.yml. Not one path returned a real
+  document; every 200 is the Webflow catch-all and every other response is a WAF challenge.
+  A recorded absence is valid data, but the pointer would assert a surface Syfe does not serve.
