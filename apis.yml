@@ -11,6 +11,19 @@ description: >-
   developer portal, API reference, machine-readable specification, SDK or webhook surface. Its
   application backend at api.syfe.com is a private, WAF-protected first-party host and is not a
   documented developer API.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - rate-limits
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/64d3542964db4e6ae6de7d1d/66e14507296bdb1ed3c04bc8_Syfe%20Homepage%20Open%20Graph.png
 url: https://raw.githubusercontent.com/api-evangelist/syfe/refs/heads/main/apis.yml
 x-type: company
