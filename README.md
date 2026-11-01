@@ -64,30 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Syfe is a Singapore-headquartered digital wealth management platform, licensed by the Monetary
-Authority of Singapore under Capital Markets Services licence CMS100837 and operating in Singapore,
-Hong Kong and Australia (where it trades as Selfwealth by Syfe). Founded in 2019 by Dhruv Arora and
-backed by Valar Ventures and Unbound, Syfe combines robo-advised managed portfolios (Core, REIT+,
-Income+, Select Themes), a self-directed brokerage for US, Singapore, Hong Kong and London listed
-stocks, ETFs and options, and Cash+ cash management, alongside a private wealth offering and a
-business treasury product.
+Syfe is a Singapore-headquartered digital wealth management platform, licensed by the Monetary Authority of Singapore under Capital Markets Services licence CMS100837 and operating in Singapore, Hong Kong and Australia (where it trades as Selfwealth by Syfe). Founded in 2019 by Dhruv Arora and backed by Valar Ventures and Unbound, Syfe combines robo-advised managed portfolios (Core, REIT+, Income+, Select Themes), a self-directed brokerage for US, Singapore and Hong Kong listed stocks and ETFs, and Cash+ cash-management products, alongside a private wealth and a business treasury offering. Syfe is a consumer and business end-user product company: as of this profile it publishes no public developer portal, API reference, machine-readable specification, SDK or webhook surface. Its application backend at api.syfe.com is a private, WAF-protected first-party host and is not a documented developer API.
 
-**Syfe publishes no public API.** As of 2026-08-29 there is no developer portal, API reference,
-OpenAPI/AsyncAPI/GraphQL contract, SDK, CLI, webhook catalogue or MCP server on any Syfe surface.
-Contract discovery was run against `www.syfe.com` and `api.syfe.com` covering `/openapi.json`,
-`/openapi.yaml`, `/swagger.json`, `/v1/openapi.json`, `/api-docs`, `/docs`, `/redoc`, `/graphql`,
-`/apis.json`, `/llms.txt` and seven `/.well-known/` paths. `www.syfe.com` is a Webflow site whose
-catch-all answers HTTP 200 with a 131,618-byte "Not Found" page for every unmatched path, and
-`api.syfe.com` — the private application backend — answers HTTP 403 with a Cloudflare interstitial
-on every path including `robots.txt`. `developer.syfe.com` and `docs.syfe.com` do not resolve.
+**Areas:** Company · Financial Services · Wealth Management · Investing · Brokerage · Robo-Advisor · Cash Management · Fintech · Singapore · Asia Pacific
 
-What Syfe does publish, and what this profile captures:
+## Syfe on APIs.io
 
-- **Vulnerability disclosure** — a bug bounty programme at <https://www.syfe.com/bug-bounty>, moved
-  to HackerOne (<https://hackerone.com/syfe_bbp/>) in March 2025.
-- **Regulatory posture** — MAS CMS100837, FIDReC membership, SIPC coverage on US-listed securities.
-  No SOC 2, ISO 27001 or PCI DSS is claimed.
-- **Domain security** — TLS 1.3, HSTS (max-age 31536000), DNSSEC enabled, SPF and DMARC present
-  (policy `quarantine`), no CAA records.
+Everything profiled for Syfe is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/syfe/](https://apis.io/providers/syfe/)** — or go straight to one of the APIs or properties below.
 
-- <https://www.syfe.com/>
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Syfe Domain Security](https://apis.io/security/syfe/syfe-domain-security/)
+- [Syfe Vulnerability Disclosure](https://apis.io/security/syfe/syfe-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Syfe Plans Pricing](https://apis.io/plans/syfe/syfe-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Syfe Rate Limits](https://apis.io/rate-limits/syfe/syfe-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.syfe.com/)
+- [Pricing](https://www.syfe.com/pricing)
+- [Support](https://www.syfe.com/contact-us)
+- [Blog](https://www.syfe.com/magazine/)
+- [Security](https://www.syfe.com/bug-bounty)
+- [Compliance](https://www.syfe.com/security)
+- [Terms of service](https://www.syfe.com/legal)
+- [Privacy policy](https://www.syfe.com/hk/legal/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 22.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 52.6 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 33.3** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/syfe/](https://apis.io/providers/syfe/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Syfe: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/syfe/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
